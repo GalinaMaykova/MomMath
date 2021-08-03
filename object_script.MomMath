@@ -1,0 +1,11 @@
+databaseexception.o
+errorbasemessage.o
+main.o
+mainwindow.o
+searchdialog.o
+taskviewer.o
+moc_errorbasemessage.o
+moc_mainwindow.o
+moc_searchdialog.o
+moc_taskviewer.o
+moc_twolistselection.o
