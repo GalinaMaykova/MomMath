@@ -24,13 +24,10 @@ QString DBPath =  QCoreApplication::applicationDirPath();
         sdb.setDatabaseName(DBName);
         sdb.open();
 
-
-//  int id = check.toInt();
-
 QSqlQuery query1;
 if (!query1.exec("select text from task where TaskId = " + taskId)){
-//   ui->->setText("!!!Запрос не удался");
-    ui->label_2->setText("!!!Запрос не удался");
+
+    ui->label_2->setText("Невозможно загрузить задачу");
    return;
 }
 query1.first();
@@ -41,7 +38,6 @@ QPixmap img;
 img.loadFromData(fromDB,"PNG");
 
 int w = img.width();
-int h = img.height();
 
 
 if (w > 1138)
@@ -50,20 +46,9 @@ if (w > 1138)
 }
 
 QLabel *imageLabel = new QLabel;
- imageLabel->setPixmap(img);
-//// imageLabel->setBackgroundRole(QPalette::Base);
- //imageLabel->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
- //imageLabel->resize(img.width(), img.height());
-
- ui->scrollArea->setBackgroundRole(QPalette::Base);
-
- ui->scrollArea->setWidget(imageLabel);
-
-
-
-
-//mw.setWidget(label);
-//mw.resize(200, 200)
+    imageLabel->setPixmap(img);
+    ui->scrollArea->setBackgroundRole(QPalette::Base);
+    ui->scrollArea->setWidget(imageLabel);
 
 
 }

@@ -15,8 +15,6 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-    void TestDb();
-
 private slots:
     void on_pushButton_clicked();
 

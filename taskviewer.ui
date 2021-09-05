@@ -13,43 +13,17 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>10</y>
-     <width>86</width>
-     <height>29</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>PushButton</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_2">
-   <property name="geometry">
-    <rect>
-     <x>1070</x>
-     <y>10</y>
-     <width>86</width>
-     <height>29</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>PushButton</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>500</x>
-     <y>20</y>
-     <width>161</width>
+     <x>20</x>
+     <y>640</y>
+     <width>521</width>
      <height>19</height>
     </rect>
    </property>
    <property name="text">
-    <string>1 из 3</string>
+    <string/>
    </property>
   </widget>
   <widget class="QScrollArea" name="scrollArea">
@@ -77,22 +51,6 @@
      </rect>
     </property>
    </widget>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
-   <property name="geometry">
-    <rect>
-     <x>270</x>
-     <y>40</y>
-     <width>121</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>TextLabel</string>
-   </property>
   </widget>
  </widget>
  <resources/>

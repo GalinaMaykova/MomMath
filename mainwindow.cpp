@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "searchdialog.h"
 #include "databaseexception.h"
+#include "errorbasemessage.h"
 
 #include <QtSql>
 
@@ -17,42 +18,20 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::TestDb()
-{
-    QString DBPath =  QCoreApplication::applicationDirPath();
-        QString DBName = DBPath + "/MomDB.db";
-        if(QFile(DBName).exists())
-        {
-            QSqlDatabase sdb = QSqlDatabase::addDatabase("QSQLITE");
-            sdb.setDatabaseName(DBName);
-            if (sdb.open())
-            {
-                QSqlQuery query("SELECT headline FROM task");
-                int i=0;
-                while (query.next())
-                {
-                   QString name = query.value(0).toString();
-                   if(i==0)
-                   {
-                        ui->label->setText(name);
-
-                    }
-                    i++;
-                }
-                sdb.close();
-            }
-        }
-        else
-        {
-            ui->label->setText("нет базы данных");
-        }
-}
-
-
+//нажатие кнопки "поиск"
 void MainWindow::on_pushButton_clicked() //кнпка поиска
 {
     SearchDialog searchD;
     searchD.initTable();
+    QString DBPath =  QCoreApplication::applicationDirPath();
+    QString DBName = DBPath + "/MomDB.db";
+    if(!QFile(DBName).exists())
+    {
+        ErrorBaseMessage errBase;
+        errBase.setModal(true); // разрешаем окну открываться
+        errBase.exec(); //выполнить
+        return;
+    }
     try
     {
         QVector<int> vec;
