@@ -20,6 +20,9 @@ SOURCES += \
     errorbasemessage.cpp \
     main.cpp \
     mainwindow.cpp \
+    myrow.cpp \
+    mysqlsearcher.cpp \
+    mytablemodel.cpp \
     searchdialog.cpp \
     taskviewer.cpp
 
@@ -27,6 +30,10 @@ HEADERS += \
     databaseexception.h \
     errorbasemessage.h \
     mainwindow.h \
+    myrow.h \
+    mysqlsearcher.h \
+    mysqlsearcher.h \
+    mytablemodel.h \
     searchdialog.h \
     taskviewer.h \
     twolistselection.h

@@ -2,6 +2,9 @@
 #define SEARCHDIALOG_H
 
 #include <QDialog>
+#include <qtableview.h>
+
+#include "mytablemodel.h"
 
 namespace Ui {
 class SearchDialog;
@@ -15,18 +18,19 @@ public:
     explicit SearchDialog(QWidget *parent = nullptr);
     ~SearchDialog();
 
-    void initTable();
-    void AddToTable(QVector<int> list);
-    QList<QPair<int , QString>> LoadProperties();
+
+    void SetTable(MyTableModel* myModel);
 
 private slots:
-    void on_tableWidget_doubleClicked(const QModelIndex &index);
 
     void on_pushButton_clicked();
 
 
+    void on_tableView_doubleClicked(const QModelIndex &index);
+
 private:
     Ui::SearchDialog *ui;
+    QTableView *view;
 };
 
 #endif // SEARCHDIALOG_H

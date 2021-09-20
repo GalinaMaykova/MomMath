@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Нет базы данных в папке с программой</string>
+    <string>Ошибка</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton">

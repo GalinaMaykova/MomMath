@@ -13,6 +13,12 @@ ErrorBaseMessage::~ErrorBaseMessage()
     delete ui;
 }
 
+void ErrorBaseMessage::SetMessage(QString msg)
+{
+    ui->label->setText(msg);
+
+}
+
 void ErrorBaseMessage::on_pushButton_clicked()
 {
     QWidget::close();

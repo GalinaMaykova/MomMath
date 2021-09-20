@@ -15,6 +15,8 @@ public:
     explicit ErrorBaseMessage(QWidget *parent = nullptr);
     ~ErrorBaseMessage();
 
+    void SetMessage(QString msg);
+
 private slots:
     void on_pushButton_clicked();
 
